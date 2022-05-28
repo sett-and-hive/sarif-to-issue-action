@@ -15,18 +15,18 @@ inputs:
   branch:
     description: 'The branch for the pull request.'
     required: true
-  dry-run:
-    description: 'Add "true" flag here for dry run mode. For testing.'
-    default: 'false'
-    required: true
   title:
     description: 'The title of the issue'
     default: 'SARIF vulnerabilities report'
-    required: true
+    required: false
   labels:
     description: 'Label for the issue'
     default: 'security'
-    required: true
+    required: false
+  dry-run:
+    description: 'Add "true" flag here for dry run mode. For testing.'
+    default: 'false'
+    required: false
 outputs:
   output:
     description: 'The output of the docker run.'
