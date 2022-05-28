@@ -60,5 +60,5 @@ ci:
     autoupdate_branch: ''
     autoupdate_commit_msg: '[pre-commit.ci] pre-commit autoupdate'
     autoupdate_schedule: weekly
-    skip: [hadolint,markdownlint,shfmtmt-docker,gitleaks-docker]
+    skip: [hadolint,markdownlint,shfmt-docker,gitleaks-docker]
     submodules: false
