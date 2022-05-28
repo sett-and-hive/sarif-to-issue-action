@@ -5,7 +5,7 @@
 create_docker_image() {
   TEST_IMAGE=issue-test
   docker build . -t "$TEST_IMAGE"
-  echo $TEST_IMAGE
+  echo "$TEST_IMAGE"
 }
 
 run_docker() {
