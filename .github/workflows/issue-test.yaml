@@ -26,7 +26,8 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           repository: ${{ github.repository }}
           branch: ${{ github.head_ref }}
-          sarif-file: ./test/fixtures/codeql.sarif
+          sarif-file: ./test/fixtures/odc.sarif
           title: "Build artifact: issue-test.yml workflow"
           labels: "build,expected"
           dry-run: false
+          odc-sarif: true
