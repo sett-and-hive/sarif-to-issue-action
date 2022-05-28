@@ -28,6 +28,6 @@ jobs:
           repository: ${{ github.repository }}
           branch: ${{ github.head_ref }}
           sarif-file: ./test/fixtures/codeql.sarif
-          title: My security issue
-          labels: security
+          title: "Build artifact: issue-test.yml workflow"
+          labels: build
           dry-run: false
