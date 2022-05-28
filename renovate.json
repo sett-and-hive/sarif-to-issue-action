@@ -10,11 +10,13 @@
   "automergeStrategy": "squash",
   "dependencyDashboard": true,
   "dependencyDashboardAutoclose": true,
+  "separateMultipleMajor": true,
   "stabilityDays": 3,
+  "prCreation:": "not-pending",
   "transitiveRemediation": true,
   "schedule": [
     "after 8pm every weekday",
-    "before 8am every weekday",
+    "before 10am every weekday",
     "every weekend"
   ],
   "timezone": "America/Chicago",
