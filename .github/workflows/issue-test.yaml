@@ -1,0 +1,32 @@
+# A workflow that tests this action
+
+name: SARIF issue workflow
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  pull-requests: write
+
+jobs:
+  issue:
+    runs-on: ubuntu-latest
+    name: Run the SARIF issue updater
+
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Post SARIF findings in the issue
+        uses: tomwillis608/sarif-to-issue-action@issue/7/add-an-action
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository }}
+          branch: ${{ github.head_ref }}
+          sarif-file: scan/results/xss.sarif
+          title: My security issue
+          labels: security
+          dry-run: false

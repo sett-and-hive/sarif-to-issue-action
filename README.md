@@ -13,7 +13,7 @@ These are the inputs to Docker image.
 
 ### `sarif-file`
 
-Path to SARIF file to add to PR comment.
+Path to SARIF file to add to the issue.
 Required.
 
 ### `token`
@@ -59,7 +59,7 @@ security scanning tool.
 ```yaml
 - name: Post SARIF findings in an issue
   if: github.event_name == 'pull_request'
-  uses: tomwillis608/sarif-to-comment-issue@main
+  uses: tomwillis608/sarif-to-issue-action@v1
   with:
     token: ${{ secrets.GITHUB_TOKEN }}
     repository: ${{ github.repository }}
@@ -83,7 +83,7 @@ With a section in your `test` job similar to this:
 ```yaml
 - name: Post SARIF findings in the image
   if: github.event_name == 'pull_request'
-  uses: tomwillis608/sarif-to-comment-action@main
+  uses: tomwillis608/sarif-to-issue-action@main
   with:
     token: fake-secret
     repository: ${{ github.repository }}
@@ -101,4 +101,25 @@ There is a simple test that builds and runs the Dockerfile and does a dry run of
 
 ```console
 test/test.sh
+```
+
+## CI
+
+There are two files that perform different tests on the repository.
+[issue-test.yaml workflow](./.github/workflow/issue-test.yaml) uses the
+`tomwillis608/sarif-to-issue-action` action as one would in their own action workflow.
+
+[ci-test.yaml workflow](./.github/workflow/ci-test.yaml) runs the same test
+script used to develop the action in this repository, ``test/test.sh`.
+
+## Notes
+
+### Support for OWASP dependency-check
+
+To make an OWASP dependency-check SARIF file work for the converter,
+you need to add an expected `defaultConfiguration` element to each `rules` object.
+
+```console
+jq '.runs[].tool.driver.rules[] |= . +
+  {"defaultConfiguration": { "level": "error"}}' test/fixtures/odc.sarif >odc-mod.sarif
 ```
