@@ -5,7 +5,6 @@
 create_docker_image() {
   TEST_IMAGE=issue-test-image
   docker build . -t "$TEST_IMAGE" -q
-  echo "$TEST_IMAGE"
 }
 
 run_docker() {
@@ -45,8 +44,6 @@ export DRY_RUN="true"
 export LIVE_RUN="false"
 MODE=$DRY_RUN
 OUTPUTS_FILE=./test/test-outputs.txt
-#FIXTURE_FILE=./test/fixtures/codeql.sarif
-# FIXTURE_FILE=./test/fixtures/odc.sarif
 OWNER=tomwillis608
 REPO=sarif-to-issue-action
 BRANCH=fake-test-branch
@@ -54,13 +51,14 @@ TITLE="Test security issue from build"
 LABELS="build"
 
 rm -f $OUTPUTS_FILE
-IMAGE0=$(create_docker_image) # In the GHA VM this returns something different than in ACT locally
-echo "$IMAGE0"
-IMAGE="$TEST_IMAGE"
-echo "image name=$IMAGE"
+IMAGE=$(create_docker_image) # In the GHA VM this returns something different than in ACT locally
+echo "$IMAGE"
+
 # shellcheck disable=SC2043
 # remove this disable when we loop over multiple files
 for testfile in "./test/fixtures/codeql.sarif"; do
   echo "$testfile"
   run_test "$testfile"
 done
+#FIXTURE_FILE=./test/fixtures/codeql.sarif
+# FIXTURE_FILE=./test/fixtures/odc.sarif
