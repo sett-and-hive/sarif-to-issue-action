@@ -1,0 +1,21 @@
+# Close stale issues created by the issues-test workflow
+
+name: 'Close stale test issues'
+on:
+  schedule:
+    - cron: '30 1 * * *'
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v4
+        with:
+          any-of-issue-labels: 'expected'
+          stale-issue-message: 'This test issue is stale because it has been open 1 days with no activity.'
+          stale-pr-message: 'This PR is stale because it has been open 45 days with no activity.'
+          close-issue-message: 'This test issue was closed because it has been stalled for a day.'
+          days-before-issue-stale: 1
+          days-before-issue-close: 1
+          days-before-pr-stale: 45
+          days-before-pr-close: -1
