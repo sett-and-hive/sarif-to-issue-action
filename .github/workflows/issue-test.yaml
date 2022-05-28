@@ -26,7 +26,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           repository: ${{ github.repository }}
           branch: ${{ github.head_ref }}
-          sarif-file: scan/results/xss.sarif
+          sarif-file: ./test/fixtures/codeql.sarif
           title: My security issue
           labels: security
           dry-run: false
