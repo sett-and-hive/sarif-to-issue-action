@@ -5,14 +5,20 @@
   "pre-commit": {
     "enabled": true
   },
-  "automerge": true,
   "automergeType": "pr",
   "automergeStrategy": "squash",
   "dependencyDashboard": true,
   "dependencyDashboardAutoclose": true,
   "separateMultipleMajor": true,
-  "stabilityDays": 3,
-  "prCreation:": "not-pending",
+  "minor": {
+    "automerge": true,
+    "stabilityDays": 3
+    "prCreation:": "not-pending",
+  },
+  "patch": {
+    "automerge": true,
+    "stabilityDays": 0
+  },
   "transitiveRemediation": true,
   "schedule": [
     "after 8pm every weekday",
