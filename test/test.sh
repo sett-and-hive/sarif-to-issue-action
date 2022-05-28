@@ -4,7 +4,7 @@
 
 create_docker_image() {
   TEST_IMAGE=issue-test-image
-  docker build . -t "$TEST_IMAGE"
+  docker build . -t "$TEST_IMAGE" -q
   echo "$TEST_IMAGE"
 }
 
@@ -54,7 +54,9 @@ TITLE="Test security issue from build"
 LABELS="build"
 
 rm -f $OUTPUTS_FILE
-IMAGE=$(create_docker_image)
+IMAGE0=$(create_docker_image) # In the GHA VM this returns something different than in ACT locally
+echo "$IMAGE0"
+IMAGE="$TEST_IMAGE"
 echo "image name=$IMAGE"
 # shellcheck disable=SC2043
 # remove this disable when we loop over multiple files
