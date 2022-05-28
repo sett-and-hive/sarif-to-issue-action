@@ -94,6 +94,53 @@ With a section in your `test` job similar to this:
     dry-run: true
 ```
 
+You will need to give you job write permissions for issues for this action to succeed.
+
+### Sample action file
+
+```yaml
+# A workflow that posts SARIF results to an issue
+
+name: Your security scan workflow
+
+on:
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  issues: write
+
+jobs:
+  issue:
+    runs-on: ubuntu-latest
+    name: Run the scan that generates a SARIF file
+
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      # Your actual scanning step here
+      - name: Your security scanner that generates SARIF output
+        uses: your-favorite/security-scanner@main
+        with:
+            format: SARIF
+            report-path: ./report/scan-findings.sarif
+
+      - name: Post SARIF findings in the issue
+        uses: tomwillis608/sarif-to-issue-action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository }}
+          branch: ${{ github.head_ref }}
+          sarif-file: ./report/scan-findings.sarif
+          title: "Security scanning results"
+          labels: security
+```
+
 ## Testing
 
 There is a simple test that builds and runs the Dockerfile and does a dry run of

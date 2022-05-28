@@ -8,7 +8,6 @@ on:
   workflow_dispatch:
 
 permissions:
-  pull-requests: write
   issues: write
 
 jobs:
@@ -29,5 +28,5 @@ jobs:
           branch: ${{ github.head_ref }}
           sarif-file: ./test/fixtures/codeql.sarif
           title: "Build artifact: issue-test.yml workflow"
-          labels: build
+          labels: "build,expected"
           dry-run: false
