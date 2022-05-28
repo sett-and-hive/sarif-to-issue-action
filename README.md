@@ -1,11 +1,9 @@
 # sarif-to-issue-action
 
-A GitHub action for @security-alert/sarif-to-issue
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/tomwillis608/sarif-to-comment-action/main.svg)](https://results.pre-commit.ci/latest/github/tomwillis608/sarif-to-comment-action/main)
 
 This GitHub action converts a SARIF file with security vulnerability findings
 into an issue with the `@security-alert/sarif-to-issue` NPM package.
-
-To run `sarif-to-issue-action` you must determine these values.
 
 These are the inputs to Docker image.
 
