@@ -1,0 +1,46 @@
+# action.yml
+name: 'sarif-to-issue-action'
+author: tomwillis608
+description: 'Run @security-alert/sarif-to-issue to post the content of a SARIF file to a GitHub issue.'
+inputs:
+  sarif-file:
+    description: 'Path to SARIF file to add to issue text.'
+    required: true
+  token:
+    description: 'GitHub Access Token'
+    required: true
+  repository:
+    description: 'GitHub repository as org/repo.'
+    required: true
+  branch:
+    description: 'The branch for the pull request.'
+    required: true
+  dry-run:
+    description: 'Add "true" flag here for dry run mode. For testing.'
+    default: 'false'
+    required: true
+  title:
+    description: 'The title of the issue'
+    default: 'SARIF vulnerabilities report'
+    required: true
+  labels:
+    description: 'Label for the issue'
+    default: 'security'
+    required: true
+outputs:
+  output:
+    description: 'The output of the docker run.'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.sarif-file }}
+    - ${{ inputs.token }}
+    - ${{ inputs.repository }}
+    - ${{ inputs.branch }}
+    - ${{ inputs.title }}
+    - ${{ inputs.labels }}
+    - ${{ inputs.dry-run }}
+branding:
+  icon: 'git-pull-request'
+  color: 'green'
