@@ -58,7 +58,7 @@
     },
     "artifacts" : [ {
       "location" : {
-        "uri" : "/src/score-engine/environments/aws/build/libs/aws-0.1.0-SNAPSHOT.jar"
+        "uri" : "/src/wart-hogg/environments/aws/build/libs/aws-0.1.0-SNAPSHOT.jar"
       },
       "hashes" : {
         "md5" : "21af31a988bb8f9e5b132fec6d9a0c3c",
@@ -68,7 +68,7 @@
       "properties" : { }
     }, {
       "location" : {
-        "uri" : "/src/score-engine/environments/build/libs/environments-0.1.0-SNAPSHOT.jar"
+        "uri" : "/src/wart-hogg/environments/build/libs/environments-0.1.0-SNAPSHOT.jar"
       },
       "hashes" : {
         "md5" : "d45d454463c76bf8950382445c0a52d9",
@@ -78,7 +78,7 @@
       "properties" : { }
     }, {
       "location" : {
-        "uri" : "/src/score-engine/gradle/wrapper/gradle-wrapper.jar"
+        "uri" : "/src/wart-hogg/gradle/wrapper/gradle-wrapper.jar"
       },
       "hashes" : {
         "md5" : "56dfd1325535d644bf08c8df699d99b8",
@@ -91,7 +91,7 @@
         "text" : "JaCoCo Java Agent"
       },
       "location" : {
-        "uri" : "/src/score-engine/build/tmp/expandedArchives/org.jacoco.agent-0.8.6.jar_a26f6511a7813217be4cd6439d66563b/jacocoagent.jar/META-INF/maven/org.jacoco/org.jacoco.agent.rt/pom.xml"
+        "uri" : "/src/wart-hogg/build/tmp/expandedArchives/org.jacoco.agent-0.8.6.jar_a26f6511a7813217be4cd6439d66563b/jacocoagent.jar/META-INF/maven/org.jacoco/org.jacoco.agent.rt/pom.xml"
       },
       "hashes" : {
         "md5" : "8e5e435d194bce1997e1ecfba0966d81",
@@ -106,7 +106,7 @@
         "text" : "JaCoCo Core"
       },
       "location" : {
-        "uri" : "/src/score-engine/build/tmp/expandedArchives/org.jacoco.agent-0.8.6.jar_a26f6511a7813217be4cd6439d66563b/jacocoagent.jar/META-INF/maven/org.jacoco/org.jacoco.core/pom.xml"
+        "uri" : "/src/wart-hogg/build/tmp/expandedArchives/org.jacoco.agent-0.8.6.jar_a26f6511a7813217be4cd6439d66563b/jacocoagent.jar/META-INF/maven/org.jacoco/org.jacoco.core/pom.xml"
       },
       "hashes" : {
         "md5" : "306ba5197c224ffde059dd6938bffa7e",
@@ -121,7 +121,7 @@
         "text" : "JaCoCo Agent"
       },
       "location" : {
-        "uri" : "/src/score-engine/build/tmp/expandedArchives/org.jacoco.agent-0.8.6.jar_a26f6511a7813217be4cd6439d66563b/jacocoagent.jar"
+        "uri" : "/src/wart-hogg/build/tmp/expandedArchives/org.jacoco.agent-0.8.6.jar_a26f6511a7813217be4cd6439d66563b/jacocoagent.jar"
       },
       "hashes" : {
         "md5" : "70d661da6d88e2c135243ee40ec564ca",
@@ -136,7 +136,7 @@
         "text" : "\n    Minimal set of interface definitions for Java support in AWS Lambda\n  "
       },
       "location" : {
-        "uri" : "/src/score-engine/environments/aws/build/distributions/lambda.zip/lib/aws-lambda-java-core-1.2.1.jar"
+        "uri" : "/src/wart-hogg/environments/aws/build/distributions/lambda.zip/lib/aws-lambda-java-core-1.2.1.jar"
       },
       "hashes" : {
         "md5" : "9f054369e68a292c0ea0216c6fc303d5",
@@ -153,7 +153,7 @@
         "text" : "\n    Event interface definitions AWS services supported by AWS Lambda.\n  "
       },
       "location" : {
-        "uri" : "/src/score-engine/environments/aws/build/distributions/lambda.zip/lib/aws-lambda-java-events-3.11.0.jar"
+        "uri" : "/src/wart-hogg/environments/aws/build/distributions/lambda.zip/lib/aws-lambda-java-events-3.11.0.jar"
       },
       "hashes" : {
         "md5" : "0908be5e74c2abd6eb46e5029bc4e1eb",
@@ -170,7 +170,7 @@
         "text" : "Date and time library to replace JDK date handling"
       },
       "location" : {
-        "uri" : "/src/score-engine/environments/aws/build/distributions/lambda.zip/lib/joda-time-2.6.jar"
+        "uri" : "/src/wart-hogg/environments/aws/build/distributions/lambda.zip/lib/joda-time-2.6.jar"
       },
       "hashes" : {
         "md5" : "66450acd0e25d83b0445ac0e195d80e7",
@@ -187,7 +187,7 @@
         "text" : "Java Concurrency Tools Core Library"
       },
       "location" : {
-        "uri" : "/src/score-engine/environments/local/build/libs/local-0.1.0-SNAPSHOT-all.jar/META-INF/maven/org.jctools/jctools-core/pom.xml"
+        "uri" : "/src/wart-hogg/environments/local/build/libs/local-0.1.0-SNAPSHOT-all.jar/META-INF/maven/org.jctools/jctools-core/pom.xml"
       },
       "hashes" : {
         "md5" : "08e7326c64d7fd6ae4ea32e7eb4e5b79",
@@ -200,7 +200,7 @@
       }
     }, {
       "location" : {
-        "uri" : "/src/score-engine/environments/local/build/libs/local-0.1.0-SNAPSHOT-all.jar"
+        "uri" : "/src/wart-hogg/environments/local/build/libs/local-0.1.0-SNAPSHOT-all.jar"
       },
       "hashes" : {
         "md5" : "a2be29f817e11aa2a6a877898bc9ed6c",
@@ -210,7 +210,7 @@
       "properties" : { }
     }, {
       "location" : {
-        "uri" : "/src/score-engine/environments/local/build/libs/local-0.1.0-SNAPSHOT-runner.jar"
+        "uri" : "/src/wart-hogg/environments/local/build/libs/local-0.1.0-SNAPSHOT-runner.jar"
       },
       "hashes" : {
         "md5" : "803022dca61027ffc9cee4198b44b16a",
@@ -220,7 +220,7 @@
       "properties" : { }
     }, {
       "location" : {
-        "uri" : "/src/score-engine/environments/local/build/libs/local-0.1.0-SNAPSHOT.jar"
+        "uri" : "/src/wart-hogg/environments/local/build/libs/local-0.1.0-SNAPSHOT.jar"
       },
       "hashes" : {
         "md5" : "d3fa3b1d2fc41d53d31ea5ddb6ff0f41",
@@ -233,7 +233,7 @@
         "text" : "Groovy: A powerful, dynamic language for the JVM"
       },
       "location" : {
-        "uri" : "/src/score-engine/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/groovy-3.0.10.jar"
+        "uri" : "/src/wart-hogg/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/groovy-3.0.10.jar"
       },
       "hashes" : {
         "md5" : "1125469744b5b7b9f404832279633442",
@@ -250,7 +250,7 @@
         "text" : "Core Jackson processing abstractions (aka Streaming API), implementation for JSON"
       },
       "location" : {
-        "uri" : "/src/score-engine/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/jackson-core-2.13.2.jar"
+        "uri" : "/src/wart-hogg/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/jackson-core-2.13.2.jar"
       },
       "hashes" : {
         "md5" : "c56433d75479665998ccbd50678480fa",
@@ -267,7 +267,7 @@
         "text" : "General data-binding functionality for Jackson: works on core streaming API"
       },
       "location" : {
-        "uri" : "/src/score-engine/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/jackson-databind-2.13.2.2.jar"
+        "uri" : "/src/wart-hogg/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/jackson-databind-2.13.2.2.jar"
       },
       "hashes" : {
         "md5" : "055c97cb488b0956801e13abcc2a0cfe",
@@ -285,7 +285,7 @@
         "text" : "Jakarta Annotations API"
       },
       "location" : {
-        "uri" : "/src/score-engine/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/jakarta.annotation-api-2.0.0.jar"
+        "uri" : "/src/wart-hogg/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/jakarta.annotation-api-2.0.0.jar"
       },
       "hashes" : {
         "md5" : "2ef9636790e49964e3f17016b02f7e1a",
@@ -302,7 +302,7 @@
         "text" : "Jakarta Dependency Injection"
       },
       "location" : {
-        "uri" : "/src/score-engine/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/jakarta.inject-api-2.0.1.jar"
+        "uri" : "/src/wart-hogg/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/jakarta.inject-api-2.0.1.jar"
       },
       "hashes" : {
         "md5" : "72003bf6efcc8455d414bbd7da86c11c",
@@ -318,7 +318,7 @@
         "text" : "Common Annotations for the JavaTM Platform API"
       },
       "location" : {
-        "uri" : "/src/score-engine/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/javax.annotation-api-1.3.2.jar"
+        "uri" : "/src/wart-hogg/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/javax.annotation-api-1.3.2.jar"
       },
       "hashes" : {
         "md5" : "2ab1973eefffaa2aeec47d50b9e40b9d",
@@ -334,7 +334,7 @@
         "text" : "logback-core module"
       },
       "location" : {
-        "uri" : "/src/score-engine/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/logback-core-1.2.10.jar"
+        "uri" : "/src/wart-hogg/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/logback-core-1.2.10.jar"
       },
       "hashes" : {
         "md5" : "697b37f140ce9ac35a4ca3eaf4059f1a",
@@ -351,7 +351,7 @@
         "text" : "Natively Cloud Native"
       },
       "location" : {
-        "uri" : "/src/score-engine/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/micronaut-aop-3.4.3.jar"
+        "uri" : "/src/wart-hogg/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/micronaut-aop-3.4.3.jar"
       },
       "hashes" : {
         "md5" : "ee781b3bcc9ccd8d0a7f11f8aaf188da",
@@ -367,7 +367,7 @@
         "text" : "Natively Cloud Native"
       },
       "location" : {
-        "uri" : "/src/score-engine/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/micronaut-buffer-netty-3.4.3.jar"
+        "uri" : "/src/wart-hogg/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/micronaut-buffer-netty-3.4.3.jar"
       },
       "hashes" : {
         "md5" : "2a2573a03cd45b3d18404a34b9b01e51",
@@ -383,7 +383,7 @@
         "text" : "Natively Cloud Native"
       },
       "location" : {
-        "uri" : "/src/score-engine/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/micronaut-context-3.4.3.jar"
+        "uri" : "/src/wart-hogg/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/micronaut-context-3.4.3.jar"
       },
       "hashes" : {
         "md5" : "7f9822ee1aa4b804794247335df548c3",
@@ -399,7 +399,7 @@
         "text" : "Natively Cloud Native"
       },
       "location" : {
-        "uri" : "/src/score-engine/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/micronaut-core-3.4.3.jar"
+        "uri" : "/src/wart-hogg/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/micronaut-core-3.4.3.jar"
       },
       "hashes" : {
         "md5" : "a1460f73fc49ecc5a764a915742cdec2",
@@ -415,7 +415,7 @@
         "text" : "Natively Cloud Native"
       },
       "location" : {
-        "uri" : "/src/score-engine/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/micronaut-core-reactive-3.4.3.jar"
+        "uri" : "/src/wart-hogg/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/micronaut-core-reactive-3.4.3.jar"
       },
       "hashes" : {
         "md5" : "4bec629cdd190308bcb13644b4951247",
@@ -431,7 +431,7 @@
         "text" : "Natively Cloud Native"
       },
       "location" : {
-        "uri" : "/src/score-engine/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/micronaut-http-3.4.3.jar"
+        "uri" : "/src/wart-hogg/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/micronaut-http-3.4.3.jar"
       },
       "hashes" : {
         "md5" : "2e3b8cd25f4ad3e89af07e84df2ae3b0",
@@ -447,7 +447,7 @@
         "text" : "Natively Cloud Native"
       },
       "location" : {
-        "uri" : "/src/score-engine/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/micronaut-http-client-3.4.3.jar"
+        "uri" : "/src/wart-hogg/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/micronaut-http-client-3.4.3.jar"
       },
       "hashes" : {
         "md5" : "aaef3df97eeb85a5af03bdeddef07518",
@@ -463,7 +463,7 @@
         "text" : "Natively Cloud Native"
       },
       "location" : {
-        "uri" : "/src/score-engine/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/micronaut-http-client-core-3.4.3.jar"
+        "uri" : "/src/wart-hogg/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/micronaut-http-client-core-3.4.3.jar"
       },
       "hashes" : {
         "md5" : "9525d53b44d7609630ffa62db4071c57",
@@ -479,7 +479,7 @@
         "text" : "Natively Cloud Native"
       },
       "location" : {
-        "uri" : "/src/score-engine/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/micronaut-http-netty-3.4.3.jar"
+        "uri" : "/src/wart-hogg/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/micronaut-http-netty-3.4.3.jar"
       },
       "hashes" : {
         "md5" : "0a094afb8178afdd9343dd512aa971f6",
@@ -495,7 +495,7 @@
         "text" : "Natively Cloud Native"
       },
       "location" : {
-        "uri" : "/src/score-engine/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/micronaut-http-server-3.4.3.jar"
+        "uri" : "/src/wart-hogg/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/micronaut-http-server-3.4.3.jar"
       },
       "hashes" : {
         "md5" : "8728284ac4a8edea969beba8dfd236a7",
@@ -511,7 +511,7 @@
         "text" : "Natively Cloud Native"
       },
       "location" : {
-        "uri" : "/src/score-engine/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/micronaut-http-server-netty-3.4.3.jar"
+        "uri" : "/src/wart-hogg/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/micronaut-http-server-netty-3.4.3.jar"
       },
       "hashes" : {
         "md5" : "8bc998e278ec179f9bc913ae5de33b89",
@@ -527,7 +527,7 @@
         "text" : "Natively Cloud Native"
       },
       "location" : {
-        "uri" : "/src/score-engine/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/micronaut-inject-3.4.3.jar"
+        "uri" : "/src/wart-hogg/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/micronaut-inject-3.4.3.jar"
       },
       "hashes" : {
         "md5" : "32e3ea2d127b177ad317c0c868795369",
@@ -543,7 +543,7 @@
         "text" : "Natively Cloud Native"
       },
       "location" : {
-        "uri" : "/src/score-engine/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/micronaut-jackson-core-3.4.3.jar"
+        "uri" : "/src/wart-hogg/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/micronaut-jackson-core-3.4.3.jar"
       },
       "hashes" : {
         "md5" : "3d634308be5557e577db073516d7c634",
@@ -559,7 +559,7 @@
         "text" : "Natively Cloud Native"
       },
       "location" : {
-        "uri" : "/src/score-engine/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/micronaut-jackson-databind-3.4.3.jar"
+        "uri" : "/src/wart-hogg/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/micronaut-jackson-databind-3.4.3.jar"
       },
       "hashes" : {
         "md5" : "4b84ccfe441f48e32e63121838554990",
@@ -575,7 +575,7 @@
         "text" : "Natively Cloud Native"
       },
       "location" : {
-        "uri" : "/src/score-engine/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/micronaut-json-core-3.4.3.jar"
+        "uri" : "/src/wart-hogg/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/micronaut-json-core-3.4.3.jar"
       },
       "hashes" : {
         "md5" : "561270b8c722573098e95b9c148b799c",
@@ -591,7 +591,7 @@
         "text" : "Natively Cloud Native"
       },
       "location" : {
-        "uri" : "/src/score-engine/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/micronaut-router-3.4.3.jar"
+        "uri" : "/src/wart-hogg/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/micronaut-router-3.4.3.jar"
       },
       "hashes" : {
         "md5" : "3059bcc62ba436061a03493e95215d30",
@@ -607,7 +607,7 @@
         "text" : "Natively Cloud Native"
       },
       "location" : {
-        "uri" : "/src/score-engine/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/micronaut-runtime-3.4.3.jar"
+        "uri" : "/src/wart-hogg/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/micronaut-runtime-3.4.3.jar"
       },
       "hashes" : {
         "md5" : "5b3dac48669488faf455510ce5f7815a",
@@ -623,7 +623,7 @@
         "text" : "Projects that enhance the Micronaut and Groovy language experience"
       },
       "location" : {
-        "uri" : "/src/score-engine/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/micronaut-runtime-groovy-3.1.0.jar"
+        "uri" : "/src/wart-hogg/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/micronaut-runtime-groovy-3.1.0.jar"
       },
       "hashes" : {
         "md5" : "03a0c3f4fe83caae97636a92250c3c8b",
@@ -639,7 +639,7 @@
         "text" : "Natively Cloud Native"
       },
       "location" : {
-        "uri" : "/src/score-engine/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/micronaut-validation-3.4.3.jar"
+        "uri" : "/src/wart-hogg/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/micronaut-validation-3.4.3.jar"
       },
       "hashes" : {
         "md5" : "a706113d57297164e973a84edc553649",
@@ -655,7 +655,7 @@
         "text" : "Natively Cloud Native"
       },
       "location" : {
-        "uri" : "/src/score-engine/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/micronaut-websocket-3.4.3.jar"
+        "uri" : "/src/wart-hogg/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/micronaut-websocket-3.4.3.jar"
       },
       "hashes" : {
         "md5" : "8c0598126aee67e7c6bb95665b670607",
@@ -671,7 +671,7 @@
         "text" : "Netty is an asynchronous event-driven network application framework for    rapid development of maintainable high performance protocol servers and    clients."
       },
       "location" : {
-        "uri" : "/src/score-engine/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/netty-transport-4.1.76.Final.jar"
+        "uri" : "/src/wart-hogg/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/netty-transport-4.1.76.Final.jar"
       },
       "hashes" : {
         "md5" : "5a85cb00b4306cd2dd9e4c58e70102a7",
@@ -688,7 +688,7 @@
         "text" : "A Protocol for Asynchronous Non-Blocking Data Sequence"
       },
       "location" : {
-        "uri" : "/src/score-engine/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/reactive-streams-1.0.3.jar"
+        "uri" : "/src/wart-hogg/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/reactive-streams-1.0.3.jar"
       },
       "hashes" : {
         "md5" : "69122b098fff1c6b1bf2cd3b355e7e03",
@@ -704,7 +704,7 @@
         "text" : "Non-Blocking Reactive Foundation for the JVM"
       },
       "location" : {
-        "uri" : "/src/score-engine/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/reactor-core-3.4.15.jar"
+        "uri" : "/src/wart-hogg/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/reactor-core-3.4.15.jar"
       },
       "hashes" : {
         "md5" : "48b8f57ce2a7c6d3ae777f00477e70ac",
@@ -720,7 +720,7 @@
         "text" : "The slf4j API"
       },
       "location" : {
-        "uri" : "/src/score-engine/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/slf4j-api-1.7.32.jar"
+        "uri" : "/src/wart-hogg/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/slf4j-api-1.7.32.jar"
       },
       "hashes" : {
         "md5" : "fbcf58513bc25b80f075d812aad3e3cf",
@@ -735,7 +735,7 @@
         "text" : "YAML 1.1 parser and emitter for Java"
       },
       "location" : {
-        "uri" : "/src/score-engine/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/snakeyaml-1.30.jar"
+        "uri" : "/src/wart-hogg/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/snakeyaml-1.30.jar"
       },
       "hashes" : {
         "md5" : "ba063b8ef3a8bfd591a1b56451166b14",
@@ -752,7 +752,7 @@
         "text" : "\n        Bean Validation API\n    "
       },
       "location" : {
-        "uri" : "/src/score-engine/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/validation-api-2.0.1.Final.jar"
+        "uri" : "/src/wart-hogg/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/validation-api-2.0.1.Final.jar"
       },
       "hashes" : {
         "md5" : "5d02c034034a7a16725ceff787e191d6",
@@ -768,7 +768,7 @@
         "text" : "Add-on module for Jackson (http://jackson.codehaus.org) to support\nJDK 8 data types.\n  "
       },
       "location" : {
-        "uri" : "/src/score-engine/environments/local/build/distributions/local-0.1.0-SNAPSHOT.zip/local-0.1.0-SNAPSHOT/lib/jackson-datatype-jdk8-2.13.2.jar"
+        "uri" : "/src/wart-hogg/environments/local/build/distributions/local-0.1.0-SNAPSHOT.zip/local-0.1.0-SNAPSHOT/lib/jackson-datatype-jdk8-2.13.2.jar"
       },
       "hashes" : {
         "md5" : "7693a537daa6acd34cc6da0a4a3dc2da",
@@ -785,7 +785,7 @@
         "text" : "Core annotations used for value types, used by Jackson data binding package.\n  "
       },
       "location" : {
-        "uri" : "/src/score-engine/environments/local/build/distributions/local-shadow-0.1.0-SNAPSHOT.tar/local-shadow-0.1.0-SNAPSHOT/lib/local-0.1.0-SNAPSHOT-all.jar/META-INF/maven/com.fasterxml.jackson.core/jackson-annotations/pom.xml"
+        "uri" : "/src/wart-hogg/environments/local/build/distributions/local-shadow-0.1.0-SNAPSHOT.tar/local-shadow-0.1.0-SNAPSHOT/lib/local-0.1.0-SNAPSHOT-all.jar/META-INF/maven/com.fasterxml.jackson.core/jackson-annotations/pom.xml"
       },
       "hashes" : {
         "md5" : "bafbf9e94915389a4885dcdd5ded0bcc",
@@ -802,7 +802,7 @@
         "text" : "Add-on module to support JSR-310 (Java 8 Date & Time API) data types."
       },
       "location" : {
-        "uri" : "/src/score-engine/environments/local/build/distributions/local-shadow-0.1.0-SNAPSHOT.tar/local-shadow-0.1.0-SNAPSHOT/lib/local-0.1.0-SNAPSHOT-all.jar/META-INF/maven/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/pom.xml"
+        "uri" : "/src/wart-hogg/environments/local/build/distributions/local-shadow-0.1.0-SNAPSHOT.tar/local-shadow-0.1.0-SNAPSHOT/lib/local-0.1.0-SNAPSHOT-all.jar/META-INF/maven/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/pom.xml"
       },
       "hashes" : {
         "md5" : "701cb2a2cc44a5ef56f956203202e2a0",
@@ -815,7 +815,7 @@
       }
     }, {
       "location" : {
-        "uri" : "/src/score-engine/build/jacocoHtml/jacoco-resources/prettify.js"
+        "uri" : "/src/wart-hogg/build/jacocoHtml/jacoco-resources/prettify.js"
       },
       "hashes" : {
         "md5" : "4b337aaa3c606cfc1a6ff1986db2c8cb",
@@ -825,7 +825,7 @@
       "properties" : { }
     }, {
       "location" : {
-        "uri" : "/src/score-engine/build/reports/tests/test/js/report.js"
+        "uri" : "/src/wart-hogg/build/reports/tests/test/js/report.js"
       },
       "hashes" : {
         "md5" : "de20378567ed128a8084bb84fa9a704c",
@@ -835,7 +835,7 @@
       "properties" : { }
     }, {
       "location" : {
-        "uri" : "/src/score-engine/build/libs/score-engine-0.1.0-SNAPSHOT.jar"
+        "uri" : "/src/wart-hogg/build/libs/wart-hogg-0.1.0-SNAPSHOT.jar"
       },
       "hashes" : {
         "md5" : "3e2e7f99c731dc6e669e975928c3c96c",
@@ -845,7 +845,7 @@
       "properties" : { }
     }, {
       "location" : {
-        "uri" : "/src/score-engine/build/jacocoHtml/jacoco-resources/sort.js"
+        "uri" : "/src/wart-hogg/build/jacocoHtml/jacoco-resources/sort.js"
       },
       "hashes" : {
         "md5" : "727f663502fd1d85787ea703506b651e",
@@ -866,7 +866,7 @@
       "locations" : [ {
         "physicalLocation" : {
           "artifactLocation" : {
-            "uri" : "/src/score-engine/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/netty-transport-4.1.76.Final.jar",
+            "uri" : "/src/wart-hogg/environments/local/build/distributions/local-0.1.0-SNAPSHOT.tar/local-0.1.0-SNAPSHOT/lib/netty-transport-4.1.76.Final.jar",
             "index" : 40
           }
         },

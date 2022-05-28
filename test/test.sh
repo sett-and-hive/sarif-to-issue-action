@@ -8,12 +8,16 @@ create_docker_image() {
 }
 
 run_docker() {
-  docker run --rm -v "$(pwd)/test":/app/test "$1" "$2" fake-password "$OWNER/$REPO" "$BRANCH" "$TITLE" "$LABELS" "$MODE" 2>&1 | tee "$OUTPUTS_FILE"
+  image="$1"
+  sarif_file="$2"
+  odc_sarif="$3"
+  docker run --rm -v "$(pwd)/test":/app/test "$image" "$sarif_file" fake-password "$OWNER/$REPO" "$BRANCH" "$TITLE" "$LABELS" "$MODE" "$odc_sarif" 2>&1 | tee "$OUTPUTS_FILE"
   echo "$OUTPUTS_FILE"
 }
 
 test_string() {
-  if [ "$1" = "$DRY_RUN" ]; then
+  mode=$1
+  if [ "$mode" = "$DRY_RUN" ]; then
     echo "## Results"
   else
     echo "HttpError: Bad credentials"
@@ -32,7 +36,9 @@ test_result() {
 }
 
 run_test() {
-  run_docker "$IMAGE" "$1"
+  sarif_file="$1"
+  odc_sarif="$2"
+  run_docker "$IMAGE" "$sarif_file" "$odc_sarif"
   TEST_STRING=$(test_string "$MODE")
   test_result "$TEST_STRING"
 }
@@ -54,11 +60,8 @@ rm -f $OUTPUTS_FILE
 IMAGE=$(create_docker_image)
 echo "$IMAGE"
 
-# shellcheck disable=SC2043
-# remove this disable when we loop over multiple files
-for testfile in "./test/fixtures/codeql.sarif"; do
-  echo "$testfile"
-  run_test "$testfile"
-done
-#FIXTURE_FILE=./test/fixtures/codeql.sarif
-# FIXTURE_FILE=./test/fixtures/odc.sarif
+CODEQL_FIXTURE="./test/fixtures/codeql.sarif"
+ODC_FIXTURE="./test/fixtures/odc.sarif"
+
+run_test "$CODEQL_FIXTURE" "false"
+run_test "$ODC_FIXTURE" "true"
