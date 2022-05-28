@@ -51,7 +51,7 @@ TITLE="Test security issue from build"
 LABELS="build"
 
 rm -f $OUTPUTS_FILE
-IMAGE=$(create_docker_image) # In the GHA VM this returns something different than in ACT locally
+IMAGE=$(create_docker_image)
 echo "$IMAGE"
 
 # shellcheck disable=SC2043
