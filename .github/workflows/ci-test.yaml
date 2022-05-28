@@ -17,8 +17,13 @@ jobs:
 
     steps:
 
+      - name: Harden Runner
+        uses: step-security/harden-runner@248ae51c2e8cc9622ecf50685c8bf7150c6e8813
+        with:
+          egress-policy: audit # TODO: change to 'egress-policy: block' after couple of runs
+
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@d0651293c4a5a52e711f25b41b05b2212f385d28
 
       - name: Run test scripts
         working-directory: ${{ github.workspace }}
@@ -33,13 +38,13 @@ jobs:
 
       - name: Read test details  file.
         id: details
-        uses: juliangruber/read-file-action@v1
+        uses: juliangruber/read-file-action@ebfa650188272343fef925480eb4d18c5d49b925
         with:
           path: ${{ github.workspace }}/test/test-outputs.txt
 
       - name: Update test script comment on PR under test
         if: github.event_name == 'pull_request' && ( ${{ success() }} || ${{ failure() }} )
-        uses: thollander/actions-comment-pull-request@v1
+        uses: thollander/actions-comment-pull-request@686ab1cab89e0f715a44a0d04b9fdfdd4f33d751
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           message: |
