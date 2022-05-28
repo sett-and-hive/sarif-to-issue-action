@@ -12,8 +12,8 @@
   "separateMultipleMajor": true,
   "minor": {
     "automerge": true,
-    "stabilityDays": 3
-    "prCreation:": "not-pending",
+    "stabilityDays": 3,
+    "prCreation": "not-pending"
   },
   "patch": {
     "automerge": true,
