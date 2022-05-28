@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/stale@v4
         with:
-          any-of-issue-labels: 'needs-more-info,needs-demo'
+          any-of-issue-labels: 'expected'
           stale-issue-message: 'This test issue is stale because it has been open 1 days with no activity.'
           stale-pr-message: 'This PR is stale because it has been open 45 days with no activity.'
           close-issue-message: 'This test issue was closed because it has been stalled for a day.'
