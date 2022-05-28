@@ -3,7 +3,7 @@
 # Flip the mode value to control the --dryRun flag
 
 create_docker_image() {
-  TEST_IMAGE=issue-test
+  TEST_IMAGE=issue-test-image
   docker build . -t "$TEST_IMAGE"
   echo "$TEST_IMAGE"
 }
@@ -55,6 +55,7 @@ LABELS="build"
 
 rm -f $OUTPUTS_FILE
 IMAGE=$(create_docker_image)
+echo "image name=$IMAGE"
 # shellcheck disable=SC2043
 # remove this disable when we loop over multiple files
 for testfile in "./test/fixtures/codeql.sarif"; do
