@@ -10,7 +10,13 @@
   "dependencyDashboard": true,
   "dependencyDashboardAutoclose": true,
   "separateMultipleMajor": true,
-  "pinDigests": true,
+  "docker": {
+    "pinDigests": true
+  },
+  "major": {
+    "automerge": false,
+    "dependencyDashboardApproval": true
+  },
   "minor": {
     "automerge": true,
     "stabilityDays": 3,
@@ -27,8 +33,5 @@
     "every weekend"
   ],
   "timezone": "America/Chicago",
-  "major": {
-    "automerge": false
-  },
   "labels": ["renovate"]
 }
