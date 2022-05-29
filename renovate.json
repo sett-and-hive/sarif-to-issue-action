@@ -10,6 +10,7 @@
   "dependencyDashboard": true,
   "dependencyDashboardAutoclose": true,
   "separateMultipleMajor": true,
+  "pinDigests": true,
   "minor": {
     "automerge": true,
     "stabilityDays": 3,
