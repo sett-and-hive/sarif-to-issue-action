@@ -64,7 +64,6 @@ security scanning tool.
 
 ```yaml
 - name: Post SARIF findings in an issue
-  if: github.event_name == 'pull_request'
   uses: tomwillis608/sarif-to-issue-action@v1
   with:
     token: ${{ secrets.GITHUB_TOKEN }}

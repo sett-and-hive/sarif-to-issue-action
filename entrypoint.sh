@@ -40,6 +40,7 @@ fi
 
 echo "Convert SARIF file $1"
 # sarif-to-issue API
+# --token
 # --title
 # --owner
 # --repo
