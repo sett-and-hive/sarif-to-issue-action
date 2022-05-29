@@ -26,7 +26,7 @@ jobs:
         uses: actions/checkout@d0651293c4a5a52e711f25b41b05b2212f385d28
 
       - name: Post SARIF findings in the issue
-        uses: tomwillis608/sarif-to-issue-action@bd897dccd956245db52aa3b2d94e80888ec63d20
+        uses: tomwillis608/sarif-to-issue-action@007b7e7d5e4f820a9db06051c79a3d8b7173dcd7
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           repository: ${{ github.repository }}
