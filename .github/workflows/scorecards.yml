@@ -21,13 +21,18 @@ jobs:
       contents: read
 
     steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@dd5681a7d0c66fb362664d618ef4a90d656f6516
+        with:
+          egress-policy: audit # TODO: change to 'egress-policy: block' after couple of runs
+
       - name: "Checkout code"
         uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # v3.0.0
         with:
           persist-credentials: false
 
       - name: "Run analysis"
-        uses: ossf/scorecard-action@c1aec4ac820532bab364f02a81873c555a0ba3a1 # v1.0.4
+        uses: ossf/scorecard-action@cd3637b65cef198b9be1162b557eeaab7a0a8887 # v1.0.4
         with:
           results_file: results.sarif
           results_format: sarif
@@ -50,6 +55,6 @@ jobs:
 
       # Upload the results to GitHub's code scanning dashboard.
       - name: "Upload to code-scanning"
-        uses: github/codeql-action/upload-sarif@5f532563584d71fdef14ee64d17bafb34f751ce5 # v1.0.26
+        uses: github/codeql-action/upload-sarif@822fe5ef9a15bd752ef127e9ff6eac38ec37dd9c # v1.0.26
         with:
           sarif_file: results.sarif

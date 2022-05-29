@@ -1,0 +1,32 @@
+# Close stale issues created by the issues-test workflow
+
+name: 'Close stale test issues'
+on:
+  schedule:
+    - cron: '30 1 * * *'
+
+permissions:
+  contents: read
+
+jobs:
+  stale:
+    permissions:
+      issues: write  # for actions/stale to close stale issues
+      pull-requests: write  # for actions/stale to close stale PRs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@dd5681a7d0c66fb362664d618ef4a90d656f6516
+        with:
+          egress-policy: audit # TODO: change to 'egress-policy: block' after couple of runs
+
+      - uses: actions/stale@65d24b70926a596b0f0098d7e1eb572175d73bc1
+        with:
+          any-of-issue-labels: 'expected'
+          stale-issue-message: 'This test issue is stale because it has been open 1 days with no activity.'
+          stale-pr-message: 'This PR is stale because it has been open 45 days with no activity.'
+          close-issue-message: 'This test issue was closed because it has been stalled for a day.'
+          days-before-issue-stale: 1
+          days-before-issue-close: 1
+          days-before-pr-stale: 45
+          days-before-pr-close: -1

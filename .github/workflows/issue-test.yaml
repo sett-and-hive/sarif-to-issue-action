@@ -17,8 +17,13 @@ jobs:
 
     steps:
 
+      - name: Harden Runner
+        uses: step-security/harden-runner@dd5681a7d0c66fb362664d618ef4a90d656f6516
+        with:
+          egress-policy: audit # TODO: change to 'egress-policy: block' after couple of runs
+
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
 
       - name: Post SARIF findings in the issue
         uses: tomwillis608/sarif-to-issue-action@v1
@@ -26,7 +31,8 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           repository: ${{ github.repository }}
           branch: ${{ github.head_ref }}
-          sarif-file: ./test/fixtures/codeql.sarif
+          sarif-file: ./test/fixtures/odc.sarif
           title: "Build artifact: issue-test.yml workflow"
           labels: "build,expected"
           dry-run: false
+          odc-sarif: true

@@ -1,11 +1,9 @@
 # sarif-to-issue-action
 
-A GitHub action for @security-alert/sarif-to-issue
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/tomwillis608/sarif-to-issue-action/main.svg)](https://results.pre-commit.ci/latest/github/tomwillis608/sarif-to-issue-action/main)
 
 This GitHub action converts a SARIF file with security vulnerability findings
 into an issue with the `@security-alert/sarif-to-issue` NPM package.
-
-To run `sarif-to-issue-action` you must determine these values.
 
 These are the inputs to Docker image.
 
@@ -49,6 +47,14 @@ Default: `security`.
 If true, do not post the results to a PR. If false, do post the results to the PR.
 Default: false
 
+### `odc-sarif`
+
+If true, the SARIF input is formatted in the
+[OWASP Dependency Check](https://owasp.org/www-project-dependency-check/)
+dialect and the input file will be modified so that the action can
+correctly parse the SARIF. If false, as for CodeQL SARIF, do nothing extra.
+Default: false
+
 ## Example usage
 
 Add this action to your own GitHub action yaml file, replacing the value in
@@ -70,9 +76,10 @@ security scanning tool.
     dry-run: false
 ```
 
-If you want to test locally with `nektos/act`, you will need to add
-values that work locally with `act`.  Make sure you use an action VM that contains
-the Docker client, like `ubuntu-latest=catthehacker`.
+If you want to test locally with [`nektos/act`](https://github.com/nektos/act),
+you will need to add choose a VM runner with `docker` so the tests work locally with
+`act`.  Make sure you use an [action VM runner](https://github.com/nektos/act#runners)
+that contains the Docker client, like `ubuntu-latest=catthehacker`.
 
 ```console
 act -P ubuntu-latest=catthehacker/ubuntu:act-20.04 -j test pull_request
@@ -139,6 +146,7 @@ jobs:
           sarif-file: ./report/scan-findings.sarif
           title: "Security scanning results"
           labels: security
+          odc-sarif: false
 ```
 
 ## Testing
@@ -159,14 +167,14 @@ There are two files that perform different tests on the repository.
 [ci-test.yaml workflow](./.github/workflow/ci-test.yaml) runs the same test
 script used to develop the action in this repository, ``test/test.sh`.
 
-## Notes
+## Contributing
 
-### Support for OWASP dependency-check
+Pull requests and stars are always welcome.
 
-To make an OWASP dependency-check SARIF file work for the converter,
-you need to add an expected `defaultConfiguration` element to each `rules` object.
+For bugs and feature requests, [please create an issue](https://github.com/tomwillis608/sarif-to-issue-action/issues).
 
-```console
-jq '.runs[].tool.driver.rules[] |= . +
-  {"defaultConfiguration": { "level": "error"}}' test/fixtures/odc.sarif >odc-mod.sarif
-```
+1. Fork it!
+2. Create your feature branch: `git checkout -b my-new-feature`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request :star:
