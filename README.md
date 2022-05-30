@@ -157,6 +157,8 @@ There is a simple test that builds and runs the Dockerfile and does a dry run of
 test/test.sh
 ```
 
+All new functionality must be covered by tests.
+
 ## CI
 
 There are two files that perform different tests on the repository.
