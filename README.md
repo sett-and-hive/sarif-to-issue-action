@@ -1,6 +1,7 @@
 # sarif-to-issue-action
 
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/tomwillis608/sarif-to-issue-action/main.svg)](https://results.pre-commit.ci/latest/github/tomwillis608/sarif-to-issue-action/main)
+[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/6081/badge)](https://bestpractices.coreinfrastructure.org/projects/6081)
 
 This GitHub action converts a SARIF file with security vulnerability findings
 into an issue with the `@security-alert/sarif-to-issue` NPM package.
