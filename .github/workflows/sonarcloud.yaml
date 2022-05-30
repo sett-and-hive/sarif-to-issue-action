@@ -1,11 +1,10 @@
 # A workflow that runs SonarQube
 
+
 name: Sonarqube Nightly
 on:
   schedule:
     - cron: '4 4 * * *'
-  branches:
-    - main
   workflow_dispatch:
   push:
     branches: [ main ]
