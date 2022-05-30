@@ -5,7 +5,7 @@
 This GitHub action converts a SARIF file with security vulnerability findings
 into an issue with the `@security-alert/sarif-to-issue` NPM package.
 
-These are the inputs to Docker image.
+These are the inputs to the action.
 
 ## Inputs
 
@@ -171,6 +171,9 @@ script used to develop the action in this repository, ``test/test.sh`.
 Pull requests and stars are always welcome.
 
 For bugs and feature requests, [please create an issue](https://github.com/tomwillis608/sarif-to-issue-action/issues).
+  All new functionality must be covered by tests.
+Please follow this [bash style guide](https://google.github.io/styleguide/shellguide.html)
+when updating or creating scripts.
 
 1. Fork it!
 2. Create your feature branch: `git checkout -b my-new-feature`
