@@ -40,7 +40,7 @@ jobs:
           persist-credentials: false
 
       - name: "Run analysis"
-        uses: ossf/scorecard-action@cd3637b65cef198b9be1162b557eeaab7a0a8887 # v1.0.4
+        uses: ossf/scorecard-action@f056c0cb88b889a382746e7e6101078f59e384d6 # v1.0.4
         with:
           results_file: results.sarif
           results_format: sarif
@@ -63,6 +63,6 @@ jobs:
 
       # Upload the results to GitHub's code scanning dashboard.
       - name: "Upload to code-scanning"
-        uses: github/codeql-action/upload-sarif@822fe5ef9a15bd752ef127e9ff6eac38ec37dd9c # v1.0.26
+        uses: github/codeql-action/upload-sarif@ccf479d3364c81503741a6f927bf29c573e35c82 # v1.0.26
         with:
           sarif_file: results.sarif
