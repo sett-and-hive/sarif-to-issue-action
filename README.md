@@ -1,6 +1,6 @@
 # sarif-to-issue-action
 
-[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/tomwillis608/sarif-to-issue-action/main.svg)](https://results.pre-commit.ci/latest/github/tomwillis608/sarif-to-issue-action/main)
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/sett-and-hive/sarif-to-issue-action/main.svg)](https://results.pre-commit.ci/latest/github/sett-and-hive/sarif-to-issue-action/main)
 [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/6081/badge)](https://bestpractices.coreinfrastructure.org/projects/6081)
 
 This GitHub action converts a SARIF file with security vulnerability findings
@@ -65,7 +65,7 @@ security scanning tool.
 
 ```yaml
 - name: Post SARIF findings in an issue
-  uses: tomwillis608/sarif-to-issue-action@v1
+  uses: sett-and-hive/sarif-to-issue-action@v1
   with:
     token: ${{ secrets.GITHUB_TOKEN }}
     repository: ${{ github.repository }}
@@ -90,7 +90,7 @@ With a section in your `test` job similar to this:
 ```yaml
 - name: Post SARIF findings in the image
   if: github.event_name == 'pull_request'
-  uses: tomwillis608/sarif-to-issue-action@main
+  uses: sett-and-hive/sarif-to-issue-action@main
   with:
     token: fake-secret
     repository: ${{ github.repository }}
@@ -138,7 +138,7 @@ jobs:
             report-path: ./report/scan-findings.sarif
 
       - name: Post SARIF findings in the issue
-        uses: tomwillis608/sarif-to-issue-action@v1
+        uses: sett-and-hive/sarif-to-issue-action@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           repository: ${{ github.repository }}
@@ -164,7 +164,7 @@ All new functionality must be covered by tests.
 
 There are two files that perform different tests on the repository.
 [issue-test.yaml workflow](./.github/workflow/issue-test.yaml) uses the
-`tomwillis608/sarif-to-issue-action` action as one would in their own action workflow.
+`sett-and-hive/sarif-to-issue-action` action as one would in their own action workflow.
 
 [ci-test.yaml workflow](./.github/workflow/ci-test.yaml) runs the same test
 script used to develop the action in this repository, ``test/test.sh`.
@@ -173,7 +173,7 @@ script used to develop the action in this repository, ``test/test.sh`.
 
 Pull requests and stars are always welcome.
 
-For bugs and feature requests, [please create an issue](https://github.com/tomwillis608/sarif-to-issue-action/issues).
+For bugs and feature requests, [please create an issue](https://github.com/sett-and-hive/sarif-to-issue-action/issues).
   All new functionality must be covered by tests.
 Please follow this [bash style guide](https://google.github.io/styleguide/shellguide.html)
 when updating or creating scripts.
