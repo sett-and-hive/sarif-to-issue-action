@@ -15,7 +15,6 @@
   },
   "major": {
     "automerge": false,
-    "dependencyDashboardApproval": true
   },
   "minor": {
     "automerge": true,
@@ -25,6 +24,9 @@
   "patch": {
     "automerge": true,
     "stabilityDays": 0
+  },
+  "digest": {
+    "automerge": true,
   },
   "transitiveRemediation": true,
   "schedule": [
