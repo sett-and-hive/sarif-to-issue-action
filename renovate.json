@@ -26,7 +26,7 @@
     "stabilityDays": 0
   },
   "digest": {
-    "automerge": true,
+    "automerge": true
   },
   "transitiveRemediation": true,
   "schedule": [
