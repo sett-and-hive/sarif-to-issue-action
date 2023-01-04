@@ -14,7 +14,8 @@
     "pinDigests": true
   },
   "major": {
-    "automerge": false,
+    "automerge": true,
+    "stabilityDays": 9
   },
   "minor": {
     "automerge": true,
