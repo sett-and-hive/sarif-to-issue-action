@@ -48,7 +48,7 @@ jobs:
 
       - name: Read test details  file.
         id: details
-        uses: juliangruber/read-file-action@69a097c6adf256da3b09a7ed9ebbb014d25fc45a
+        uses: juliangruber/read-file-action@02bbba9876a8f870efd4ad64e3b9088d3fb94d4b
         with:
           path: ${{ github.workspace }}/test/test-outputs.txt
 
