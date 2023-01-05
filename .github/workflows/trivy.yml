@@ -43,12 +43,12 @@ jobs:
 
       - name: Build an image from Dockerfile
         run: |
-          docker build -t detect-secrets-image .
+          docker build -t trivy-scan-image .
 
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@9ab158e8597f3b310480b9a69402b419bc03dbd5 # tag=v0.8.0
         with:
-          image-ref: detect-secrets-image
+          image-ref: trivy-scan-image
           format: 'sarif'
           output: 'trivy-results.sarif'
           severity: 'CRITICAL,HIGH'
