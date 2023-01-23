@@ -24,7 +24,7 @@ repos:
 
   # Linter for GitHub Actoin workflow files
   - repo: https://github.com/rhysd/actionlint
-    rev: v1.6.22
+    rev: v1.6.23
     hooks:
     - id: actionlint-docker
 
@@ -54,7 +54,7 @@ repos:
 
   # Detect secrets with GitLeaks
   - repo: https://github.com/zricethezav/gitleaks
-    rev: v8.15.2
+    rev: v8.15.3
     hooks:
       - id: gitleaks-docker
 
