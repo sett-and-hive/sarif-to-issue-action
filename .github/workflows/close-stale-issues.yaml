@@ -25,7 +25,7 @@ jobs:
             api.github.com:443
 
       - name: Stale Issues
-        uses: actions/stale@326b913d3ab9fc28cfa5afaddccd5ef730929eda
+        uses: actions/stale@01aa53266cd31523ca362b0c4d4d1f41f397524d
         with:
           any-of-issue-labels: 'expected'
           stale-issue-message: 'This test issue is stale because it has been open 1 days with no activity.'
