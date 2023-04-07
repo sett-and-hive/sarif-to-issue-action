@@ -66,11 +66,11 @@ jobs:
           exit-code: "1" # change to 1, if you want the build to break
           ignore-unfixed: true
           vuln-type: 'os,library'
-          security-checks: vuln
 
       # https://github.com/aquasecurity/trivy-action/issues/12 for an explanation
       - name: Correct Trivy cache permissions
         if: ${{ success() }} || ${{ failure() }}
+        continue-on-error: true
         run: sudo chown -R "$USER":"$GROUP" .trivy
 
       - name: Upload Trivy scan results to GitHub Security tab
