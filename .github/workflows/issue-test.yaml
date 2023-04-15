@@ -28,7 +28,7 @@ jobs:
             registry.npmjs.org:443
 
       - name: Checkout
-        uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab
+        uses: actions/checkout@47fbe2df0ad0e27efb67a70beac3555f192b062f
 
       - name: Post SARIF findings in the issue
         uses: sett-and-hive/sarif-to-issue-action@main # Not pinned, this is a test

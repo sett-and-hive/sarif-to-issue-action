@@ -33,7 +33,7 @@ jobs:
             security.debian.org:80
 
       - name: Checkout
-        uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab
+        uses: actions/checkout@47fbe2df0ad0e27efb67a70beac3555f192b062f
 
       - name: Run test scripts
         working-directory: ${{ github.workspace }}
