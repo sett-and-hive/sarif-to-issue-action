@@ -54,7 +54,7 @@ jobs:
 
       - name: Update test script comment on PR under test
         if: github.event_name == 'pull_request' && ( ${{ success() }} || ${{ failure() }} )
-        uses: thollander/actions-comment-pull-request@a97e9c5dad60d28e6381569056e0a6c036b0b788
+        uses: thollander/actions-comment-pull-request@43a6ffd42f69cb796ba51934831ff95af8498977
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           message: |
