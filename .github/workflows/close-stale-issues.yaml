@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Harden Runner
-        uses: step-security/harden-runner@215c5ca5ec7b0ee8425ee2e531db206868f0b83b
+        uses: step-security/harden-runner@75ac55456f91a43ec55fa9768ebac0fde49ef6fc
         with:
           egress-policy: block
           disable-telemetry: true
@@ -25,7 +25,7 @@ jobs:
             api.github.com:443
 
       - name: Stale Issues
-        uses: actions/stale@02989dcb65055c8fd08a5dec9332c1279c8e2639
+        uses: actions/stale@465330b7e2524a0d9b3430795c7970658106bf5c
         with:
           any-of-issue-labels: 'expected'
           stale-issue-message: 'This test issue is stale because it has been open 1 days with no activity.'
