@@ -5,3 +5,4 @@ test/test-*.txt
 test/fixtures/*.mod
 bin
 .actrc
+.idea/
