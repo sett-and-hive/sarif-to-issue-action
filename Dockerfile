@@ -5,7 +5,7 @@ FROM node:21-bullseye-slim@sha256:7ceb032d9ffe90538cd140d5da9dd26ac24994f23daa00
 WORKDIR /app
 
 # Install dependencies
-RUN npm install @security-alert/sarif-to-issue@1.10.4
+RUN npm install @security-alert/sarif-to-issue@1.10.10
 
 RUN apt-get update && apt-get install --no-install-recommends -y jq=1.6-2.1 && rm -rf /var/lib/apt/lists/*
 
