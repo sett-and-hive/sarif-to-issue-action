@@ -51,4 +51,4 @@ echo "Convert SARIF file $1"
 # --labels
 # sarif-file-path
 npx @security-alert/sarif-to-issue --dryRun "$DRY_RUN" --token "$TOKEN" --owner "$OWNER" --sarifContentOwner "$OWNER" --repo "$REPO" --sarifContentRepo "$REPO" --sarifContentBranch "$BRANCH" --title "$TITLE" --labels "$LABELS" "$SARIF_FILE"
-echo "::set-output name=output::$?"
+echo "output=$?" >> "$GITHUB_OUTPUT"
