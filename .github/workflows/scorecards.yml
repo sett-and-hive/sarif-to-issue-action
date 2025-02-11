@@ -6,6 +6,7 @@ on:
     - cron: '43 12 * * 5'
   push:
     branches: [ main ]
+  workflow_dispatch:
 
 # Declare default permissions as read only.
 permissions: read-all
@@ -24,7 +25,8 @@ jobs:
       - name: Harden Runner
         uses: step-security/harden-runner@cb605e52c26070c328afc4562f0b4ada7618a84e
         with:
-          egress-policy: allow
+          disable-sudo: true
+          egress-policy: audit
           disable-telemetry: false
           allowed-endpoints: >
             api.github.com:443
@@ -33,6 +35,9 @@ jobs:
             codeload.github.com:443
             github.com:443
             pipelines.actions.githubusercontent.com:443
+            oauth2.sigstore.dev:443
+            oss-fuzz-build-logs.storage.googleapis.com:443
+            www.bestpractices.dev:443
 
       - name: "Checkout code"
         uses: actions/checkout@1e31de5234b9f8995739874a8ce0492dc87873e2 # v4.0.0
