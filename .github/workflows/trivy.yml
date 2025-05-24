@@ -41,7 +41,7 @@ jobs:
             registry.npmjs.org:443
 
       # Cache directory for trivy
-      - uses: actions/cache@05a3ec84eff668545956fd18022155c47e93e2684 # v4.0.3
+      - uses: actions/cache@v4 # v4.0.3
         with:
           path: .trivy
           key: ${{ runner.os }}-trivy-${{ github.run_id }}
