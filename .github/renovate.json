@@ -40,5 +40,15 @@
     "every weekend"
   ],
   "timezone": "America/Chicago",
-  "labels": ["renovate"]
+  "labels": ["renovate"],
+  "packageRules": [
+    {
+      "matchPackageNames": ["aquasecurity/trivy-action"],
+      "allowedVersions": ">=0.35.0"
+    },
+    {
+      "matchPackageNames": ["aquasecurity/setup-trivy"],
+      "dependencyDashboardApproval": true
+    }
+  ]
 }
