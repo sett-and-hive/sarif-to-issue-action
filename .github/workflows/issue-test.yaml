@@ -24,8 +24,13 @@ jobs:
           disable-telemetry: true
           allowed-endpoints: >
             api.github.com:443
+            auth.docker.io:443
+            deb.debian.org:80
             github.com:443
+            production.cloudflare.docker.com:443
+            registry-1.docker.io:443
             registry.npmjs.org:443
+            security.debian.org:80
 
       - name: Checkout
         uses: actions/checkout@ff7abcd0c3c05ccf6adc123a8cd1fd4fb30fb493
