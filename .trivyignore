@@ -53,3 +53,8 @@ CVE-2026-26960
 #          Suppressed pending upstream resolution.
 # Acceptance date: 2026-03-22
 CVE-2026-29786
+
+# Reason: CVE-2026-31802 affects an unknown package; no fix available.
+#          Suppressed pending upstream resolution.
+# Acceptance date: 2026-03-22
+CVE-2026-31802
