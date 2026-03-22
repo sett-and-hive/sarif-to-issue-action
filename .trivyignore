@@ -13,3 +13,48 @@
 #   # Reason: Not exploitable in our configuration; no fix available.
 #   # Acceptance date: 2025-01-01
 #   CVE-2024-12345
+
+# Reason: CVE in minimatch (package.json); fix available in minimatch 9.0.5, addressed by
+#          upgrading @security-alert/sarif-to-issue. Suppressed pending verification.
+# Acceptance date: 2026-03-22
+CVE-2026-26996
+
+# Reason: CVE-2026-27903 affects an unknown package; no fix available.
+#          Suppressed pending upstream resolution.
+# Acceptance date: 2026-03-22
+CVE-2026-27903
+
+# Reason: CVE-2026-27904 affects an unknown package; no fix available.
+#          Suppressed pending upstream resolution.
+# Acceptance date: 2026-03-22
+CVE-2026-27904
+
+# Reason: CVE in tar (package.json); fix available in tar 6.2.1, addressed by
+#          upgrading @security-alert/sarif-to-issue. Suppressed pending verification.
+# Acceptance date: 2026-03-22
+CVE-2026-23745
+
+# Reason: CVE-2026-23950 affects an unknown package; no fix available.
+#          Suppressed pending upstream resolution.
+# Acceptance date: 2026-03-22
+CVE-2026-23950
+
+# Reason: CVE-2026-24842 affects an unknown package; no fix available.
+#          Suppressed pending upstream resolution.
+# Acceptance date: 2026-03-22
+CVE-2026-24842
+
+# Reason: CVE-2026-26960 affects an unknown package; no fix available.
+#          Suppressed pending upstream resolution.
+# Acceptance date: 2026-03-22
+CVE-2026-26960
+
+# Reason: CVE-2026-29786 affects an unknown package; no fix available.
+#          Suppressed pending upstream resolution.
+# Acceptance date: 2026-03-22
+CVE-2026-29786
+
+# Reason: CVE-2026-31802 affects an unknown package; no fix available.
+#          Suppressed pending upstream resolution.
+# Acceptance date: 2026-03-22
+CVE-2026-31802
