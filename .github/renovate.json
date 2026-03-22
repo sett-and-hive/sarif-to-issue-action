@@ -11,7 +11,7 @@
   "pre-commit": {
     "enabled": true
   },
-  
+
   // ----------------------------
   // SLOW LANE (default behavior)
   // ----------------------------
