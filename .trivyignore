@@ -13,3 +13,8 @@
 #   # Reason: Not exploitable in our configuration; no fix available.
 #   # Acceptance date: 2025-01-01
 #   CVE-2024-12345
+
+# Reason: CVE in minimatch (package.json); fix available in minimatch 9.0.5, addressed by
+#          upgrading @security-alert/sarif-to-issue. Suppressed pending verification.
+# Acceptance date: 2026-03-22
+CVE-2026-26996
