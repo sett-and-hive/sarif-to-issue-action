@@ -46,6 +46,7 @@ jobs:
             get.trivy.dev:443
             ghcr.io:443
             github.com:443
+            mirror.gcr.io:443
             objects.githubusercontent.com:443
             pkg-containers.githubusercontent.com:443
             production.cloudflare.docker.com:443
@@ -82,7 +83,6 @@ jobs:
           exit-code: "0" # Do not fail the job when vulnerabilities are found; SARIF upload handles tracking
           ignore-unfixed: true
           vuln-type: 'os,library'
-          db-repository: ghcr.io/aquasecurity/trivy-db
 
       - name: Run Trivy vulnerability scanner (text)
         if: always()
@@ -95,7 +95,6 @@ jobs:
           cache-dir: ${{ env.TRIVY_CACHE_DIR }}
           ignore-unfixed: true
           vuln-type: 'os,library'
-          db-repository: ghcr.io/aquasecurity/trivy-db
 
       # https://github.com/aquasecurity/trivy-action/issues/12 for an explanation
       - name: Correct Trivy cache permissions
