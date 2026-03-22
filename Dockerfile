@@ -7,7 +7,7 @@ WORKDIR /app
 # Install dependencies
 RUN npm install @security-alert/sarif-to-issue@1.10.10
 
-RUN apt-get update && apt-get install --no-install-recommends -y jq=1.6-2.1 && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install --no-install-recommends -y jq=1.6-2.1+deb11u1 && rm -rf /var/lib/apt/lists/*
 
 COPY ./entrypoint.sh ./entrypoint.sh
 
