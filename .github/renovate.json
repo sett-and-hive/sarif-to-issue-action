@@ -21,7 +21,7 @@
   // to suppress branch/PR creation until the waiting period has elapsed.
   "minimumReleaseAge": "14 days",
   "minimumReleaseAgeBehaviour": "timestamp-required",
-  "prCreation": "not-pending",
+  "prCreation": "immediate",
   "internalChecksFilter": "strict",
 
   // Slow down overall throughput/noise
