@@ -1,14 +1,32 @@
   {
-  // SHAI-HULUD FREEZE:
-  // Flip this to true or remove this flag when it is safe
-  // to re-enable Renovate.
-  "enabled": false,
+  // Re-enable Renovate in "slow lane + security-only automerge" mode
+  "enabled": true,
+
   "extends": [
-    "config:base"
+    "config:recommended",
+
+    // Supply-chain hardening for GitHub Actions: pin to immutable digests/SHAs, and let Renovate update them.
+    "helpers:pinGitHubActionDigests"
   ],
   "pre-commit": {
     "enabled": true
   },
+
+  // ----------------------------
+  // SLOW LANE (default behavior)
+  // ----------------------------
+  // Wait "small weeks" before PR creation, not just before merge.
+  // Renovate recommends combining:
+  //   minimumReleaseAge + prCreation="not-pending" + internalChecksFilter="strict"
+  // to suppress branch/PR creation until the waiting period has elapsed.
+  "minimumReleaseAge": "14 days",
+  "minimumReleaseAgeBehaviour": "timestamp-required",
+  "prCreation": "not-pending",
+  "internalChecksFilter": "strict",
+
+  // Slow down overall throughput/noise
+  "prHourlyLimit": 1,
+  "prConcurrentLimit": 2,
   "automergeType": "pr",
   "automergeStrategy": "squash",
   "dependencyDashboard": true,
