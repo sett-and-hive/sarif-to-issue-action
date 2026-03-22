@@ -58,3 +58,12 @@ CVE-2026-29786
 #          Suppressed pending upstream resolution.
 # Acceptance date: 2026-03-22
 CVE-2026-31802
+
+# Reason: CVE-2025-64756 is a command-injection flaw in glob's CLI (-c/--cmd option).
+#          The glob package is an indirect dependency bundled with npm in the base image.
+#          npm uses glob as a library and never invokes the vulnerable CLI path.
+#          The vulnerability therefore cannot be triggered in this container's use case.
+#          A fix is available in glob 10.5.0 / 11.1.0 and will be addressed when the
+#          node:22 base image is updated to a version that bundles npm >= 10.9.7.
+# Acceptance date: 2026-03-22
+CVE-2025-64756
