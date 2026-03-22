@@ -52,6 +52,13 @@ repos:
         language: docker_image
         entry: mvdan/shfmt -ci -s -i 2
 
+  # Lint Renovate config
+  - repo: https://github.com/renovatebot/pre-commit-hooks
+    rev: 42.71.0
+    hooks:
+      - id: renovate-config-validator
+        files: ^\.github/renovate\.json5$
+
   # Detect secrets with GitLeaks
   - repo: https://github.com/zricethezav/gitleaks
     rev: v8.30.1
@@ -66,5 +73,5 @@ ci:
     autoupdate_branch: ''
     autoupdate_commit_msg: '[pre-commit.ci] pre-commit autoupdate'
     autoupdate_schedule: weekly
-    skip: [hadolint,markdownlint,shfmt-docker,gitleaks-docker,actionlint-docker]
+    skip: [hadolint,markdownlint,shfmt-docker,gitleaks-docker,actionlint-docker,renovate-config-validator]
     submodules: false

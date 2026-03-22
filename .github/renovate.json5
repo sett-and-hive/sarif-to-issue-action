@@ -15,10 +15,9 @@
   // ----------------------------
   // SLOW LANE (default behavior)
   // ----------------------------
-  // Wait "small weeks" before PR creation, not just before merge.
-  // Renovate recommends combining:
-  //   minimumReleaseAge + prCreation="not-pending" + internalChecksFilter="strict"
-  // to suppress branch/PR creation until the waiting period has elapsed.
+  // PRs are created immediately, but auto-merge is gated by minimumReleaseAge
+  // combined with internalChecksFilter="strict" so merging waits until
+  // the release has been stable for the configured period.
   "minimumReleaseAge": "14 days",
   "minimumReleaseAgeBehaviour": "timestamp-required",
   "prCreation": "immediate",
@@ -32,26 +31,21 @@
   "dependencyDashboard": true,
   "dependencyDashboardAutoclose": true,
   "separateMultipleMajor": true,
-  "docker": {
-    "pinDigests": true
-  },
   "major": {
     "automerge": true,
-    "stabilityDays": 9
+    "minimumReleaseAge": "14 days"
   },
   "minor": {
     "automerge": true,
-    "stabilityDays": 3,
-    "prCreation": "not-pending"
+    "minimumReleaseAge": "14 days"
   },
   "patch": {
     "automerge": true,
-    "stabilityDays": 0
+    "minimumReleaseAge": "7 days"
   },
   "digest": {
     "automerge": true
   },
-  "transitiveRemediation": true,
   "schedule": [
     "after 8pm every weekday",
     "before 10am every weekday",
@@ -60,6 +54,15 @@
   "timezone": "America/Chicago",
   "labels": ["renovate"],
   "packageRules": [
+    {
+      "matchCategories": ["docker"],
+      "pinDigests": true
+    },
+    {
+      // Security/vulnerability updates should be applied immediately
+      "matchUpdateTypes": ["vulnerability"],
+      "minimumReleaseAge": "0 days"
+    },
     {
       "matchPackageNames": ["aquasecurity/trivy-action"],
       "allowedVersions": ">=0.35.0"
