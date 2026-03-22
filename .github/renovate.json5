@@ -32,26 +32,22 @@
   "dependencyDashboard": true,
   "dependencyDashboardAutoclose": true,
   "separateMultipleMajor": true,
-  "docker": {
-    "pinDigests": true
-  },
   "major": {
     "automerge": true,
-    "stabilityDays": 9
+    "minimumReleaseAge": "9 days"
   },
   "minor": {
     "automerge": true,
-    "stabilityDays": 3,
+    "minimumReleaseAge": "3 days",
     "prCreation": "not-pending"
   },
   "patch": {
     "automerge": true,
-    "stabilityDays": 0
+    "minimumReleaseAge": null
   },
   "digest": {
     "automerge": true
   },
-  "transitiveRemediation": true,
   "schedule": [
     "after 8pm every weekday",
     "before 10am every weekday",
@@ -60,6 +56,10 @@
   "timezone": "America/Chicago",
   "labels": ["renovate"],
   "packageRules": [
+    {
+      "matchCategories": ["docker"],
+      "pinDigests": true
+    },
     {
       "matchPackageNames": ["aquasecurity/trivy-action"],
       "allowedVersions": ">=0.35.0"
