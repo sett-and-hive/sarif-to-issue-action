@@ -53,7 +53,7 @@ jobs:
           path: ${{ github.workspace }}/test/test-outputs.txt
 
       - name: Update test script comment on PR under test
-        if: github.event_name == 'pull_request' && ( ${{ success() }} || ${{ failure() }} )
+        if: github.event_name == 'pull_request'
         uses: thollander/actions-comment-pull-request@e4a76dd2b0a3c2027c3fd84147a67c22ee4c90fa
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
