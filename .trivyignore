@@ -1,0 +1,15 @@
+# .trivyignore
+#
+# List CVE or GHSA IDs here to suppress Trivy vulnerability findings.
+# Each entry should be preceded by comments explaining the reason for ignoring
+# and the acceptance date.
+#
+# Format:
+#   # Reason: <justification for ignoring>
+#   # Acceptance date: YYYY-MM-DD
+#   CVE-YYYY-NNNNN
+#
+# Example:
+#   # Reason: Not exploitable in our configuration; no fix available.
+#   # Acceptance date: 2025-01-01
+#   CVE-2024-12345
