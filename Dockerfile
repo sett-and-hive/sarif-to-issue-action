@@ -5,7 +5,7 @@ FROM node:22-bookworm-slim@sha256:4f77a690f2f8946ab16fe1e791a3ac0667ae1c3575c3e4
 WORKDIR /app
 
 # Install dependencies
-RUN npm install @security-alert/sarif-to-issue@1.10.10
+RUN npm install @security-alert/sarif-to-issue@1.11.1
 
 RUN apt-get update && apt-get install --no-install-recommends -y jq=1.6-2.1+deb12u1 && rm -rf /var/lib/apt/lists/*
 
