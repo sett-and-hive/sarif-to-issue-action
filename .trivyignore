@@ -28,3 +28,8 @@ CVE-2026-27903
 #          Suppressed pending upstream resolution.
 # Acceptance date: 2026-03-22
 CVE-2026-27904
+
+# Reason: CVE in tar (package.json); fix available in tar 6.2.1, addressed by
+#          upgrading @security-alert/sarif-to-issue. Suppressed pending verification.
+# Acceptance date: 2026-03-22
+CVE-2026-23745
