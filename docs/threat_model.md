@@ -106,7 +106,7 @@ registry.npmjs.org:443
 ```
 
 `harden-runner` itself is SHA-pinned:
-`step-security/harden-runner@f4a75cfd619ee5ce8d5b864b0d183aff3c69b55a`.
+`step-security/harden-runner@df199fb7be9f65074067a9eb93f12bb4c5547cf2`.
 
 ---
 
