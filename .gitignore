@@ -6,3 +6,5 @@ test/fixtures/*.mod
 bin
 .actrc
 .idea/
+__pycache__/
+*.pyc
