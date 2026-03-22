@@ -33,3 +33,8 @@ CVE-2026-27904
 #          upgrading @security-alert/sarif-to-issue. Suppressed pending verification.
 # Acceptance date: 2026-03-22
 CVE-2026-23745
+
+# Reason: CVE-2026-23950 affects an unknown package; no fix available.
+#          Suppressed pending upstream resolution.
+# Acceptance date: 2026-03-22
+CVE-2026-23950
