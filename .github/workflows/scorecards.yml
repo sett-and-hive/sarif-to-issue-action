@@ -18,6 +18,8 @@ jobs:
     permissions:
       # Needed to upload the results to code-scanning dashboard.
       security-events: write
+      # Needed to obtain OIDC token for signing scorecard results.
+      id-token: write
       actions: read
       contents: read
 
@@ -33,10 +35,12 @@ jobs:
             api.osv.dev:443
             bestpractices.coreinfrastructure.org:443
             codeload.github.com:443
+            fulcio.sigstore.dev:443
             github.com:443
             pipelines.actions.githubusercontent.com:443
             oauth2.sigstore.dev:443
             oss-fuzz-build-logs.storage.googleapis.com:443
+            rekor.sigstore.dev:443
             www.bestpractices.dev:443
 
       - name: "Checkout code"
