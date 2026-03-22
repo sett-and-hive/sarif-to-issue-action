@@ -24,7 +24,7 @@ This document describes the security posture of `sarif-to-issue-action`, the thr
 
 **Date identified:** 2026-03-19 UTC
 
-**Description:**  
+**Description:**
 Attackers force-pushed 75 of 76 `aquasecurity/trivy-action` release tags and 7 `aquasecurity/setup-trivy` tags to credential-stealing malware. The malicious code exfiltrated:
 
 - `GITHUB_TOKEN` and any repository secrets
