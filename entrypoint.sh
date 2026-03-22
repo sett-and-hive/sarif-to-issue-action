@@ -48,8 +48,9 @@ if [[ "$SARIF_FILE" = /* ]] && [ ! -f "$SARIF_FILE" ]; then
     fi
   done
   if [ "$RESOLVED" = false ]; then
-    echo "Warning: Could not resolve SARIF file path '$1' inside the container. Proceeding with original path."
+    echo "Error: Could not resolve SARIF file path '$1' inside the container."
     echo "Hint: Use a relative path instead of \${{ github.workspace }} for the sarif-file input."
+    exit 1
   fi
 fi
 
