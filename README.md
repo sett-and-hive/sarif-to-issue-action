@@ -15,6 +15,11 @@ These are the inputs to the action.
 Path to SARIF file to add to the issue.
 Required.
 
+Use a relative path (e.g., `./scan/results/findings.sarif`).
+Do not use `${{ github.workspace }}` as a prefix — that expression expands to the
+host runner path, which is not the same path inside the Docker container used by
+this action.
+
 ### `token`
 
 Your GitHub Access Token.

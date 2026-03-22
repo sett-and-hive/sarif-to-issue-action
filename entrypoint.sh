@@ -24,6 +24,35 @@ fix_odc_sarif() {
 
 SARIF_FILE=$1
 TOKEN=$2
+
+# Resolve the SARIF file path.
+# If an absolute path is provided (e.g., via ${{ github.workspace }}) it will
+# not resolve correctly inside this Docker container where the workspace is
+# mounted at /github/workspace. Convert absolute paths to be relative to
+# GITHUB_WORKSPACE when the file cannot be found at the absolute path.
+if [[ "$SARIF_FILE" = /* ]] && [ ! -f "$SARIF_FILE" ]; then
+  WORKSPACE="${GITHUB_WORKSPACE:-/github/workspace}"
+  # Strip leading path components one at a time and check each candidate.
+  # This handles paths like ${{ github.workspace }}/relative/path that expand
+  # to a host runner path not accessible inside the Docker container.
+  REMAINDER="${SARIF_FILE#/}"
+  RESOLVED=false
+  while [[ "$REMAINDER" == */* ]]; do
+    REMAINDER="${REMAINDER#*/}"
+    CANDIDATE="${WORKSPACE}/${REMAINDER}"
+    if [ -f "$CANDIDATE" ]; then
+      echo "Note: Resolved SARIF file path to: $CANDIDATE"
+      SARIF_FILE="$CANDIDATE"
+      RESOLVED=true
+      break
+    fi
+  done
+  if [ "$RESOLVED" = false ]; then
+    echo "Warning: Could not resolve SARIF file path '$1' inside the container. Proceeding with original path."
+    echo "Hint: Use a relative path instead of \${{ github.workspace }} for the sarif-file input."
+  fi
+fi
+
 REPOSITORY=$3
 BRANCH=$4
 TITLE=$5
