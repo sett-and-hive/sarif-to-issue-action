@@ -4,7 +4,7 @@ author: tomwillis608
 description: 'Run @security-alert/sarif-to-issue to post the content of a SARIF file to a GitHub issue.'
 inputs:
   sarif-file:
-    description: 'Path to SARIF file to add to issue text.'
+    description: 'Path to SARIF file to add to issue text. Must be a relative path (e.g., ./scan/results/findings.sarif). Do not use github.workspace as a prefix.'
     required: true
   token:
     description: 'GitHub Access Token'
