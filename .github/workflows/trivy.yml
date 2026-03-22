@@ -70,12 +70,12 @@ jobs:
 
       # https://github.com/aquasecurity/trivy-action/issues/12 for an explanation
       - name: Correct Trivy cache permissions
-        if: ${{ success() }} || ${{ failure() }}
+        if: always()
         continue-on-error: true
         run: sudo chown -R "$USER":"$GROUP" .trivy
 
       - name: Upload Trivy scan results to GitHub Security tab
-        if: ${{ success() }} || ${{ failure() }}
+        if: always()
         uses: github/codeql-action/upload-sarif@959cbb7472c4d4ad70cdfe6f4976053fe48ab394 # tag=v21.3
         with:
           sarif_file: 'trivy-results.sarif'
