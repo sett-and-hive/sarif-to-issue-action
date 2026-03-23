@@ -54,14 +54,14 @@ repos:
 
   # Lint Renovate config
   - repo: https://github.com/renovatebot/pre-commit-hooks
-    rev: 42.71.0
+    rev: 43.86.1
     hooks:
       - id: renovate-config-validator
         files: ^\.github/renovate\.json5$
 
   # Detect secrets with GitLeaks
   - repo: https://github.com/zricethezav/gitleaks
-    rev: v8.30.1
+    rev: v8.30.0
     hooks:
       - id: gitleaks-docker
 
