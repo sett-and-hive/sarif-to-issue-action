@@ -166,6 +166,7 @@ of a compromised version.
 | New third-party Action not SHA-pinned | Low | High | All current workflow actions are SHA-pinned. Code review must enforce this for any future additions. |
 | Egress allow-list gaps | Very Low | Medium | Allow-list is scoped to known-good endpoints. Any newly required endpoint must be explicitly added. |
 | CVE-2025-64756 — glob CLI command injection | Very Low | Low | glob is bundled with npm in the base image and is used as a library only. The vulnerable CLI path (`-c`/`--cmd` option) is never invoked. Suppressed in `.trivyignore`; will be resolved when the base image is refreshed to a node:22 build that bundles npm >= 10.9.7 (which requires glob >= 10.5.0). |
+| CVE-2026-33671 — picomatch | Very Low | Low | Trivy reports CVE-2026-33671 for picomatch, but the current node:22 base image bundles picomatch 4.0.2 (the fixed version) via npm/tinyglobby. Suppressed in `.trivyignore` as a scanner false positive pending advisory metadata correction. |
 
 ---
 
@@ -203,4 +204,4 @@ This threat model is reviewed:
 - When a new third-party Action is added to any workflow
 - At least once per quarter as part of routine security hygiene
 
-<!-- Last updated: 2026-03-22 — CVE-2025-64756 glob CLI command injection added to Residual Risk -->
+<!-- Last updated: 2026-04-18 — CVE-2026-33671 picomatch false-positive suppression added to Residual Risk -->

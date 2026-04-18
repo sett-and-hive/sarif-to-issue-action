@@ -67,3 +67,11 @@ CVE-2026-31802
 #          node:22 base image is updated to a version that bundles npm >= 10.9.7.
 # Acceptance date: 2026-03-22
 CVE-2025-64756
+
+# Reason: CVE-2026-33671 is reported for picomatch, but the node:22-bookworm-slim
+#          base image currently bundles picomatch 4.0.2 under npm/tinyglobby,
+#          which is the fixed version cited by the advisory. Treating as false
+#          positive and suppressing until Trivy advisory metadata is corrected.
+# Acceptance date: 2026-04-18
+CVE-2026-33671
+
